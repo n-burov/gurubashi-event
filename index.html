@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Epic PvP Event — Custom WoW</title>
+  <title>Saga of The Superfluous Influences — Chapter I</title>
   <style>
     /* Сброс и базовые стили в стиле Warcraft */
     * {
@@ -15,40 +15,40 @@
     body {
       font-family: 'Segoe UI', 'Arial', sans-serif;
       background: #0b0c0e;
-      background-image: radial-gradient(circle at 20% 30%, #1e2a2e 0%, #0a0c0d 100%);
+      background-image: radial-gradient(circle at 20% 30%, #1a1510 0%, #060505 100%);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 24px 16px;
-      color: #f0e6d2;
-      border-top: 6px solid #b89b5e;
-      border-bottom: 6px solid #b89b5e;
+      color: #d4c9b5;
+      border-top: 6px solid #8b3a3a;
+      border-bottom: 6px solid #8b3a3a;
       position: relative;
     }
 
-    /* Декоративный узор */
+    /* Декоративный узор — кровавые капли */
     body::before {
       content: "";
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><path d="M30 5 L35 15 L45 15 L37 23 L40 33 L30 27 L20 33 L23 23 L15 15 L25 15 L30 5Z" fill="rgba(180,150,90,0.03)"/></svg>');
+      background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="3" fill="rgba(139,58,58,0.04)"/><circle cx="30" cy="25" r="2" fill="rgba(139,58,58,0.03)"/></svg>');
       background-repeat: repeat;
       pointer-events: none;
       z-index: 0;
     }
 
     .wrapper {
-      max-width: 1000px;
+      max-width: 1100px;
       width: 100%;
       margin: 20px auto;
-      background: rgba(10, 14, 16, 0.75);
+      background: rgba(8, 6, 4, 0.8);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border: 2px solid #6a5e45;
+      border: 2px solid #6b3a3a;
       border-radius: 48px 48px 32px 32px;
-      box-shadow: 0 25px 40px -10px rgba(0,0,0,0.7), inset 0 0 0 1px rgba(220, 200, 140, 0.2);
+      box-shadow: 0 25px 40px -10px rgba(0,0,0,0.9), inset 0 0 0 1px rgba(180, 80, 80, 0.3), 0 0 30px rgba(139, 58, 58, 0.3);
       padding: 36px 30px 40px;
       position: relative;
       z-index: 2;
@@ -66,9 +66,9 @@
     }
 
     .lang-btn {
-      background: rgba(20, 25, 20, 0.8);
-      border: 1px solid #7a6e4f;
-      color: #d4c5a2;
+      background: rgba(20, 15, 12, 0.9);
+      border: 1px solid #8b5a5a;
+      color: #c4a090;
       padding: 8px 14px;
       border-radius: 40px;
       font-size: 1rem;
@@ -78,73 +78,71 @@
       transition: all 0.15s;
       text-transform: uppercase;
       letter-spacing: 1px;
-      box-shadow: 0 2px 6px #0000004d;
+      box-shadow: 0 2px 6px #00000080;
     }
 
     .lang-btn:hover {
-      background: #4a3f2b;
-      border-color: #c4a86a;
-      color: #ffefc0;
+      background: #4a2828;
+      border-color: #b06060;
+      color: #ffd4c0;
     }
 
     .lang-btn.active {
-      background: #b89b5e;
-      border-color: #f5d796;
-      color: #0e0c08;
-      box-shadow: 0 0 12px #eec77e;
+      background: #8b3a3a;
+      border-color: #d47070;
+      color: #ffe8d8;
+      box-shadow: 0 0 15px #b04a4a;
     }
 
-    /* Шапка с гербом */
-    .header-badge {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 12px;
-      margin-top: 10px;
-    }
-
-    .alliance-horde {
-      display: flex;
-      gap: 20px;
-      font-size: 32px;
-      filter: drop-shadow(0 4px 4px #00000066);
+    /* Заголовки */
+    .saga-title {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #a08070;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      font-style: italic;
     }
 
     h1 {
-      font-size: 2.9rem;
-      font-weight: 800;
+      font-size: 2.8rem;
+      font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 8px;
+      letter-spacing: 6px;
       text-align: center;
-      color: #f5d78c;
-      text-shadow: 0 0 10px #b87c1e, 0 4px 8px #000000b3, 0 1px 0 #4a3a1a;
+      color: #d4a090;
+      text-shadow: 0 0 15px #8b2020, 0 4px 8px #000000, 0 1px 0 #3a1515;
       margin-bottom: 8px;
       word-break: break-word;
       font-family: 'Palatino', 'Georgia', serif;
     }
 
-    .subtitle {
+    .chapter-sub {
       text-align: center;
-      font-size: 1.4rem;
-      color: #c0b7a1;
+      font-size: 1.3rem;
+      color: #b09080;
       margin-bottom: 30px;
-      border-bottom: 1px dashed #7a6a4b;
+      border-bottom: 1px dashed #7a4a4a;
       padding-bottom: 18px;
       letter-spacing: 3px;
       text-transform: uppercase;
+      font-style: italic;
     }
 
-    /* ----- ТАЙМЕР (ЦЕНТРАЛЬНЫЙ БЛОК) ----- */
+    /* ----- ТАЙМЕР ----- */
     .timer-section {
       text-align: center;
       margin: 20px 0 30px;
     }
 
     .timer-label {
-      font-size: 1.3rem;
-      color: #b8a98b;
+      font-size: 1.4rem;
+      color: #c09888;
       margin-bottom: 12px;
       font-weight: 400;
       text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
     .countdown {
@@ -153,11 +151,11 @@
       justify-content: center;
       align-items: baseline;
       gap: 12px 30px;
-      background: #0e1217d6;
+      background: #0c0806e0;
       padding: 25px 20px;
       border-radius: 120px;
-      border: 1px solid #9c8a5e;
-      box-shadow: inset 0 2px 8px #000000, 0 10px 20px -5px #00000080, 0 0 0 2px #1f281f;
+      border: 1px solid #8b5050;
+      box-shadow: inset 0 2px 8px #000000, 0 10px 20px -5px #000000, 0 0 0 2px #2a1515, 0 0 20px #5a202055;
       margin-bottom: 8px;
       backdrop-filter: blur(4px);
     }
@@ -173,21 +171,21 @@
       font-size: 5.5rem;
       font-weight: 900;
       line-height: 1.1;
-      color: #ffe7a0;
-      text-shadow: 0 0 20px #ffb347, 0 4px 8px black;
+      color: #ffc8a0;
+      text-shadow: 0 0 25px #b03030, 0 4px 8px black;
       font-family: 'Courier New', monospace;
       letter-spacing: 6px;
-      background: #1d1b16;
+      background: #1a0e0e;
       padding: 8px 12px 0 18px;
       border-radius: 24px;
-      border: 1px solid #b89f5e;
-      box-shadow: inset 0 -2px 0 #3f321e;
+      border: 1px solid #a06060;
+      box-shadow: inset 0 -2px 0 #4a2020;
     }
 
     .timer-caption {
       font-size: 1.2rem;
       text-transform: uppercase;
-      color: #cdba8e;
+      color: #c8a090;
       margin-top: 8px;
       font-weight: 600;
       letter-spacing: 2px;
@@ -196,31 +194,31 @@
     .event-date-full {
       margin-top: 10px;
       font-size: 1.4rem;
-      color: #e2d5b6;
-      background: #1f231eb3;
+      color: #d4b8a8;
+      background: #1a1210b3;
       display: inline-block;
       padding: 8px 32px;
       border-radius: 60px;
-      border-left: 4px solid #bfa055;
-      border-right: 4px solid #bfa055;
+      border-left: 4px solid #a05050;
+      border-right: 4px solid #a05050;
     }
 
     /* ----- ИНФОРМАЦИЯ О ИВЕНТЕ ----- */
     .info-panel {
-      background: #0e1419c9;
-      border: 1px solid #7c6e4f;
+      background: #0a0606d0;
+      border: 1px solid #7a4545;
       border-radius: 36px;
       padding: 28px 26px;
       margin: 30px 0 32px;
-      box-shadow: inset 0 0 10px #0000005e, 0 10px 15px -5px black;
+      box-shadow: inset 0 0 15px #000000, 0 10px 15px -5px black, 0 0 20px #4a202040;
       backdrop-filter: blur(4px);
     }
 
     .info-title {
       font-size: 2rem;
       font-weight: bold;
-      color: #e9d29e;
-      border-left: 10px solid #ab8e4c;
+      color: #d8b098;
+      border-left: 10px solid #9b4040;
       padding-left: 22px;
       margin-bottom: 22px;
       text-transform: uppercase;
@@ -240,9 +238,9 @@
     .info-label {
       font-size: 1.2rem;
       font-weight: 700;
-      color: #c9af77;
+      color: #b88070;
       text-transform: uppercase;
-      border-bottom: 2px dotted #7a6846;
+      border-bottom: 2px dotted #7a4848;
       padding-bottom: 5px;
       margin-bottom: 12px;
       display: inline-block;
@@ -250,15 +248,71 @@
 
     .info-text {
       font-size: 1.15rem;
-      line-height: 1.5;
-      color: #e0d7c2;
+      line-height: 1.6;
+      color: #d0c0b0;
     }
 
     .info-text strong {
-      color: #ffd966;
+      color: #e0a080;
     }
 
-    /* Ссылки — крупные кнопки */
+    /* Блок с лором */
+    .lore-section {
+      margin-top: 25px;
+      padding: 20px 20px 10px;
+      background: #05030360;
+      border-radius: 24px;
+      border: 1px solid #5a3030;
+    }
+
+    .lore-toggle {
+      cursor: pointer;
+      color: #b88070;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+      user-select: none;
+    }
+
+    .lore-toggle:hover {
+      color: #d8a090;
+    }
+
+    .lore-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      font-family: 'Georgia', serif;
+      color: #c0a898;
+      line-height: 1.7;
+      font-size: 1.05rem;
+      white-space: pre-line;
+    }
+
+    .lore-content.open {
+      max-height: 800px;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+
+    .lore-content p {
+      margin-bottom: 16px;
+    }
+
+    .organizer-tag {
+      margin-top: 20px;
+      text-align: right;
+      font-style: italic;
+      color: #a07060;
+      border-top: 1px solid #5a3838;
+      padding-top: 12px;
+    }
+
+    /* Ссылки */
     .links-section {
       display: flex;
       flex-wrap: wrap;
@@ -272,9 +326,9 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      background: #292216;
-      border: 2px solid #b4945a;
-      color: #f3e3b0;
+      background: #1a0e0e;
+      border: 2px solid #9b5050;
+      color: #e8c8b0;
       padding: 16px 36px;
       font-size: 1.4rem;
       font-weight: bold;
@@ -282,30 +336,30 @@
       text-decoration: none;
       letter-spacing: 3px;
       border-radius: 80px;
-      box-shadow: 0 5px 0 #3f2e17, 0 8px 18px black;
+      box-shadow: 0 5px 0 #3a1818, 0 8px 18px black;
       transition: all 0.08s ease;
       backdrop-filter: blur(8px);
-      background: #1e1a13e0;
+      background: #1e1210e0;
       flex: 0 1 auto;
     }
 
     .wow-button:hover {
-      background: #3d2f1b;
-      border-color: #e4bf7a;
-      color: #fff3cf;
+      background: #3a2020;
+      border-color: #c07070;
+      color: #ffe0d0;
       transform: translateY(-2px);
-      box-shadow: 0 7px 0 #3f2e17, 0 12px 20px black;
+      box-shadow: 0 7px 0 #3a1818, 0 12px 20px black, 0 0 15px #a04040;
     }
 
     .wow-button:active {
       transform: translateY(4px);
-      box-shadow: 0 3px 0 #3f2e17, 0 8px 15px black;
+      box-shadow: 0 3px 0 #3a1818, 0 8px 15px black;
     }
 
     .footer-note {
       margin-top: 30px;
       text-align: center;
-      color: #968c77;
+      color: #907870;
       font-size: 1rem;
     }
 
@@ -320,10 +374,10 @@
         right: 16px;
       }
       h1 {
-        font-size: 2rem;
-        letter-spacing: 4px;
+        font-size: 1.8rem;
+        letter-spacing: 3px;
       }
-      .subtitle {
+      .chapter-sub {
         font-size: 1rem;
       }
       .timer-number {
@@ -368,20 +422,13 @@
     <button class="lang-btn" id="langRu">🇷🇺 RU</button>
   </div>
 
-  <!-- Герб Альянса и Орды -->
-  <div class="header-badge">
-    <div class="alliance-horde">
-      <span style="color:#2459b0; text-shadow:0 0 12px #3b7bff;">⚔️</span> 
-      <span style="color:#b02c2c; text-shadow:0 0 12px #ff5e5e;">🛡️</span>
-    </div>
-  </div>
+  <div class="saga-title" data-lang="sagaTitle">Saga of "The Superfluous Influences"</div>
+  <h1 data-lang="title">WHISPERS FOR BLOOD</h1>
+  <div class="chapter-sub" data-lang="chapterSub">Chapter I — Summit at Bleakhollow Crater</div>
 
-  <h1 data-lang="title">BLOODY BATTLE</h1>
-  <div class="subtitle" data-lang="subtitle">Arathi Basin · Custom Server</div>
-
-  <!-- ===== ОСНОВНОЙ ТАЙМЕР ===== -->
+  <!-- ТАЙМЕР -->
   <div class="timer-section">
-    <div class="timer-label" data-lang="timerLabel">Time until mass PvP begins</div>
+    <div class="timer-label" data-lang="timerLabel">Time until the summit begins</div>
     <div class="countdown" id="countdown">
       <div class="timer-unit"><span class="timer-number" id="days">00</span><span class="timer-caption" data-lang="days">days</span></div>
       <div class="timer-unit"><span class="timer-number" id="hours">00</span><span class="timer-caption" data-lang="hours">hours</span></div>
@@ -391,41 +438,71 @@
     <div class="event-date-full" id="eventDateDisplay">Loading date...</div>
   </div>
 
-  <!-- ===== ОСНОВНАЯ ИНФОРМАЦИЯ ===== -->
+  <!-- ИНФОРМАЦИЯ О ИВЕНТЕ -->
   <div class="info-panel">
-    <div class="info-title" data-lang="infoTitle">⚔️ Event Details ⚔️</div>
+    <div class="info-title" data-lang="infoTitle">⚔️ Blood Summit Details ⚔️</div>
     <div class="info-grid">
       <div class="info-item">
         <div class="info-label" data-lang="whenLabel">📅 When</div>
-        <div class="info-text"><strong>May 15, 2026, 8:00 PM MSK</strong><br><span data-lang="whenDesc">Gathering 30 minutes before start</span></div>
+        <div class="info-text"><strong>Saturday, April 11, 2026 · 20:00 MSK</strong></div>
       </div>
       <div class="info-item">
         <div class="info-label" data-lang="whereLabel">📍 Location</div>
-        <div class="info-text"><span data-lang="whereDesc">Arathi Basin — custom version<br>Entrance via portal in Stormwind / Orgrimmar</span></div>
+        <div class="info-text"><strong>Bleakhollow Crater, Hyjal</strong></div>
       </div>
       <div class="info-item">
-        <div class="info-label" data-lang="rewardsLabel">🏆 Rewards</div>
-        <div class="info-text"><span data-lang="rewardsDesc">Unique mount "Bloody Raven", title "Storm Conqueror", 5000 gold and guild resources</span></div>
+        <div class="info-label" data-lang="objectiveLabel">🎯 Objective</div>
+        <div class="info-text"><span data-lang="objectiveDesc">Overwhelm the enemy in the center to earn points</span></div>
       </div>
       <div class="info-item">
-        <div class="info-label" data-lang="formatLabel">👥 Format</div>
-        <div class="info-text"><span data-lang="formatDesc">Mass PvP 40x40 · Respawn at point · No durability loss</span></div>
+        <div class="info-label" data-lang="retreatLabel">🚩 Retreat</div>
+        <div class="info-text"><span data-lang="retreatDesc">Return to your banner when a point is awarded</span></div>
+      </div>
+      <div class="info-item">
+        <div class="info-label" data-lang="roundsLabel">🔄 Rounds</div>
+        <div class="info-text"><span data-lang="roundsDesc">Up to 5 within 50 min · First to 3 wins</span></div>
+      </div>
+      <div class="info-item">
+        <div class="info-label" data-lang="bonusLabel">✨ Bonus Phase</div>
+        <div class="info-text"><span data-lang="bonusDesc">After 50 min — Circle of Power (optional)</span></div>
+      </div>
+      <div class="info-item">
+        <div class="info-label" data-lang="chokeLabel">⛰️ Choke Points</div>
+        <div class="info-text"><span data-lang="chokeDesc">Losing faction holds passes from Bleakhollow Crater & Ruins of Telennas</span></div>
+      </div>
+      <div class="info-item">
+        <div class="info-label" data-lang="lycanLabel">🐺 Lycan Kill</div>
+        <div class="info-text"><span data-lang="lycanDesc">Open to any with quest · Expect mass murder chaos</span></div>
       </div>
     </div>
-    <div style="margin-top: 20px; font-style: italic; color: #bfb088; border-top: 1px solid #5e523b; padding-top: 16px;" data-lang="infoFooter">
-      ⚡ All participants will receive consumable potions and food. Arrive 15 minutes early for positioning.
+    
+    <!-- Сворачиваемый блок с лором -->
+    <div class="lore-section">
+      <div class="lore-toggle" id="loreToggle">
+        <span>📖 ▼</span> <span data-lang="loreToggle">The Whispers — Lore</span>
+      </div>
+      <div class="lore-content" id="loreContent">
+        <p data-lang="loreText1"><em>"Yuh no need fi know mi name, brethren call me Fingerpunch. I flick finger, you feel punch..."</em></p>
+        <p data-lang="loreText2">Word reach. Alliance gather in Hyjal. Summon Lycan Father. Dem tink nobody watch. We ride. All di way… mi hear whisper. Soft. <em>"Blood…"</em> Mi shake head. Voice come back. Hyjal want blood. Hyjal hungry. Good. Mi drown di soil inna blood. Di voice no need fi tell mi.</p>
+        <p data-lang="loreText3">Reach Circle of Power… Alliance already fighting worgen beast. Good timing. Fiyah drop pon dem. Lightning crack. Steel bite. Dem line break quick quick. Dem scatter. Dem scream. Dem dead. Ritual mash up. Alliance fail fi kill Lycan. But whisper still dere. Inside mi skull. Between mi ears. Low. Slow. <em>"More blood."</em></p>
+        <p data-lang="loreText4">Later… pigskin messenger lose head near Ratchet. Letter inna pocket. Meeting. Bleakhollow Crater. Alliance want fi talk. Want Horde allow ritual next time. Mi choke cackle. Tears in mi eyes, grin pon mi face. Horde Alliance Meeting. Inside volcano crater. Talk like friend. Dem tink mi brethren naive. If dem waan gather… we shall gather. Bring banner. Bring speech. Bring all dem brave hero. Crater waiting. And whisper still talking. Soft. Hungry. Hyjal remember every drop. Hyjal always want more blood.</p>
+        <div class="organizer-tag" data-lang="organizer">— Fingerpunch, Kor'Kron Enforcer</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px; font-style: italic; color: #b09080; border-top: 1px solid #5a3535; padding-top: 16px;" data-lang="infoFooter">
+      ⚠️ Full rules in Discord. Reading full ruleset can prevent official event cancellation. If cancelled, unorganized WPvP encouraged.
     </div>
   </div>
 
-  <!-- ===== ССЫЛКИ ===== -->
+  <!-- ССЫЛКИ -->
   <div class="links-section">
-    <a href="#" class="wow-button" target="_blank" id="discordLink">🎧 DISCORD</a>
-    <a href="#" class="wow-button" target="_blank" id="registerLink">📋 REGISTER</a>
-    <a href="#" class="wow-button" target="_blank" id="rulesLink">📜 RULES</a>
+    <a href="https://discord.gg/hJGWD63WF2" class="wow-button" target="_blank" id="discordLink">🎧 DISCORD</a>
+    <a href="https://discord.gg/hJGWD63WF2" class="wow-button" target="_blank" id="rulesLink">📜 FULL RULES</a>
   </div>
 
   <div class="footer-note" data-lang="footerNote">
-    Custom WoW Server · Organizer: [PlayerName] · #PvPEvent
+    Event by Fingerpunch · Kor'Kron Enforcers · #WhispersForBlood
   </div>
 </div>
 
@@ -433,65 +510,87 @@
   (function() {
     "use strict";
 
-    // ---------- НАСТРОЙКИ ИВЕНТА ----------
-    const eventDate = new Date(2026, 4, 15, 20, 0, 0); // 15 мая 2026, 20:00 МСК
+    // ---------- ДАТА ИВЕНТА: 11 апреля 2026, 20:00 МСК ----------
+    const eventDate = new Date(2026, 3, 11, 20, 0, 0); // месяц 3 = апрель
     
-    // Ссылки
-    const discordURL = "https://discord.gg/yourserver";
-    const registerURL = "https://forms.gle/example";
-    const rulesURL = "https://your-custom-wow.com/pvp-rules";
+    // Discord ссылка
+    const discordURL = "https://discord.gg/hJGWD63WF2";
 
     // ---------- СЛОВАРИ ПЕРЕВОДОВ ----------
     const translations = {
       en: {
-        title: "BLOODY BATTLE",
-        subtitle: "Arathi Basin · Custom Server",
-        timerLabel: "Time until mass PvP begins",
+        sagaTitle: 'Saga of "The Superfluous Influences"',
+        title: "WHISPERS FOR BLOOD",
+        chapterSub: "Chapter I — Summit at Bleakhollow Crater",
+        timerLabel: "Time until the summit begins",
         days: "days",
         hours: "hours",
         minutes: "minutes",
         seconds: "seconds",
-        eventDateDisplay: "May 15, 2026, 8:00 PM MSK",
-        eventStarted: "EVENT HAS ALREADY STARTED! 🔥",
-        infoTitle: "⚔️ Event Details ⚔️",
+        eventDateDisplay: "Saturday, April 11, 2026 · 20:00 MSK",
+        eventStarted: "THE SUMMIT HAS BEGUN! 🔥",
+        infoTitle: "⚔️ Blood Summit Details ⚔️",
         whenLabel: "📅 When",
-        whenDesc: "Gathering 30 minutes before start",
         whereLabel: "📍 Location",
-        whereDesc: "Arathi Basin — custom version<br>Entrance via portal in Stormwind / Orgrimmar",
-        rewardsLabel: "🏆 Rewards",
-        rewardsDesc: "Unique mount \"Bloody Raven\", title \"Storm Conqueror\", 5000 gold and guild resources",
-        formatLabel: "👥 Format",
-        formatDesc: "Mass PvP 40x40 · Respawn at point · No durability loss",
-        infoFooter: "⚡ All participants will receive consumable potions and food. Arrive 15 minutes early for positioning.",
-        footerNote: "Custom WoW Server · Organizer: [PlayerName] · #PvPEvent",
+        objectiveLabel: "🎯 Objective",
+        objectiveDesc: "Overwhelm the enemy in the center to earn points",
+        retreatLabel: "🚩 Retreat",
+        retreatDesc: "Return to your banner when a point is awarded and victory is clear",
+        roundsLabel: "🔄 Rounds",
+        roundsDesc: "Up to five within 50 minutes; first to 3 wins",
+        bonusLabel: "✨ Bonus Phase",
+        bonusDesc: "At 50 min — Circle of Power (Whoever wants to stay, event officially over)",
+        chokeLabel: "⛰️ Choke Points",
+        chokeDesc: "Losing faction may hold passes from Bleakhollow Crater & Ruins of Telennas",
+        lycanLabel: "🐺 Lycan Kill",
+        lycanDesc: "Open to any player with quest (low expectations, mass murder chaos likely)",
+        loreToggle: "📖 The Whispers — Lore (click to expand)",
+        loreText1: '<em>"Yuh no need fi know mi name, brethren call me Fingerpunch. I flick finger, you feel punch. Time pass since saga Dominion of the North. Knives in the dark. Summons in the night. Assassin like rats in sewers. Raid against raid. Ambush against ambush. Karazhan. Ahn\'Qiraj. Blackrock Mountain. Every road choked with ambushes. Every gate soaked in blood. Mostly theirs. Kor\'Kron Enforcers carry mark now. Alliance knows our color. Good. Tabard red with blood. We march, drums follow. Kalimdor to Eastern Kingdoms, banners not lowered. Peace is for deaded. Alive only war."</em>',
+        loreText2: 'Word reach. Alliance gather in Hyjal. Summon Lycan Father. Dem tink nobody watch. We ride. All di way… mi hear whisper. Soft. <em>"Blood…"</em> Mi shake head. Voice come back. Hyjal want blood. Hyjal hungry. Good. Mi drown di soil inna blood. Di voice no need fi tell mi.',
+        loreText3: 'Reach Circle of Power… Alliance already fighting worgen beast. Good timing. Fiyah drop pon dem. Lightning crack. Steel bite. Dem line break quick quick. Dem scatter. Dem scream. Dem dead. Ritual mash up. Alliance fail fi kill Lycan. But whisper still dere. Inside mi skull. Between mi ears. Low. Slow. <em>"More blood."</em>',
+        loreText4: 'Later… pigskin messenger lose head near Ratchet. Letter inna pocket. Meeting. Bleakhollow Crater. Alliance want fi talk. Want Horde allow ritual next time. Mi choke cackle. Tears in mi eyes, grin pon mi face. Horde Alliance Meeting. Inside volcano crater. Talk like friend. Dem tink mi brethren naive. If dem waan gather… we shall gather. Bring banner. Bring speech. Bring all dem brave hero. Crater waiting. And whisper still talking. Soft. Hungry. Hyjal remember every drop. Hyjal always want more blood.',
+        organizer: "— Fingerpunch, Kor'Kron Enforcer",
+        infoFooter: "⚠️ Full rules on Discord. Reading full ruleset can prevent official event cancellation on the day. If event rules broken leads to cancellation, whoever choosing to stay for random unorganized WPvP is encouraged to do so.",
+        footerNote: "Event by Fingerpunch · Kor'Kron Enforcers · #WhispersForBlood",
         discordBtn: "🎧 DISCORD",
-        registerBtn: "📋 REGISTER",
-        rulesBtn: "📜 RULES"
+        rulesBtn: "📜 FULL RULES"
       },
       ru: {
-        title: "КРОВАВАЯ БИТВА",
-        subtitle: "Низина Арати · Кастомный сервер",
-        timerLabel: "До начала массового PvP",
+        sagaTitle: 'Сага о "The Superfluous Influences"',
+        title: "WHISPERS FOR BLOOD",
+        chapterSub: "Глава I — Совет в Кратере Бликоуллоу",
+        timerLabel: "До начала совета",
         days: "дней",
         hours: "часов",
         minutes: "минут",
         seconds: "секунд",
-        eventDateDisplay: "15 мая 2026, 20:00 МСК",
-        eventStarted: "СОБЫТИЕ УЖЕ НАЧАЛОСЬ! 🔥",
-        infoTitle: "⚔️ Детали события ⚔️",
+        eventDateDisplay: "Суббота, 11 апреля 2026 · 20:00 МСК",
+        eventStarted: "СОВЕТ УЖЕ НАЧАЛСЯ! 🔥",
+        infoTitle: "⚔️ Детали Кровавого Совета ⚔️",
         whenLabel: "📅 Когда",
-        whenDesc: "Сбор за 30 минут до начала",
         whereLabel: "📍 Локация",
-        whereDesc: "Низина Арати (Arathi Basin) — кастомная версия<br>Вход через портал в Штормграде / Оргриммаре",
-        rewardsLabel: "🏆 Награды",
-        rewardsDesc: "Уникальный маунт «Кровавый ворон», титул «Покоритель бурь», 5000 золота и ресурсы гильдии",
-        formatLabel: "👥 Формат",
-        formatDesc: "Массовое PvP 40x40 · Респаун на точке · Без потери прочности",
-        infoFooter: "⚡ Все участники получат расходуемые зелья и еду. Приходите за 15 минут до начала для расстановки.",
-        footerNote: "Кастомный сервер WoW · Организатор: [Имя_игрока] · #PvPEvent",
+        objectiveLabel: "🎯 Цель",
+        objectiveDesc: "Подавить врага в центре, чтобы заработать очки",
+        retreatLabel: "🚩 Отступление",
+        retreatDesc: "Вернитесь к своему знамени после начисления очка и явной победы",
+        roundsLabel: "🔄 Раунды",
+        roundsDesc: "До пяти за 50 минут · Победа до 3 выигранных раундов",
+        bonusLabel: "✨ Бонусная фаза",
+        bonusDesc: "Через 50 минут — Круг Силы (для желающих, ивент официально завершён)",
+        chokeLabel: "⛰️ Узкие места",
+        chokeDesc: "Проигрывающая фракция может удерживать проходы из Кратера Бликоуллоу и Руин Теленнаса",
+        lycanLabel: "🐺 Убийство Ликана",
+        lycanDesc: "Открыто для всех с квестом (низкие ожидания, скорее всего массовая резня)",
+        loreToggle: "📖 Шёпот — Лор (нажмите, чтобы раскрыть)",
+        loreText1: '<em>"Тебе не нужно знать моё имя, братья зовут меня Пальцебой. Щёлкну пальцем — почувствуешь удар. Время прошло с саги Владычество Севера. Ножи во тьме. Призывы в ночи. Убийцы как крысы в канализации. Рейд против рейда. Засада против засады. Каражан. Ан\'Кираж. Гора Чёрной Скалы. Каждая дорога забита засадами. Каждые ворота пропитаны кровью. В основном их. Кор\'Кронские Каратели теперь носят метку. Альянс знает наш цвет. Хорошо. Табард красный от крови. Мы маршируем, барабаны следуют. От Калимдора до Восточных Королевств, знамёна не опущены. Мир для мёртвых. Живые — только война."</em>',
+        loreText2: 'Дошли вести. Альянс собирается на Хиджале. Призывают Отца Ликанов. Они думают, никто не смотрит. Мы скачем. Всю дорогу… я слышу шёпот. Тихий. <em>"Кровь…"</em> Я трясу головой. Голос возвращается. Хиджал хочет крови. Хиджал голоден. Хорошо. Я утоплю почву в крови. Голосу не нужно мне говорить.',
+        loreText3: 'Достигли Круга Силы… Альянс уже сражается со зверем-воргеном. Удачное время. Огонь падает на них. Молния трещит. Сталь кусает. Их строй ломается быстро-быстро. Они разбегаются. Они кричат. Они мертвы. Ритуал сорван. Альянс не смог убить Ликана. Но шёпот всё ещё там. Внутри моего черепа. Между ушами. Низкий. Медленный. <em>"Ещё крови."</em>',
+        loreText4: 'Позже… свинокожий гонец потерял голову возле Кабестана. Письмо в кармане. Встреча. Кратер Бликоуллоу. Альянс хочет поговорить. Хочет, чтобы Орда позволила ритуал в следующий раз. Я давлюсь смехом. Слёзы в глазах, ухмылка на лице. Встреча Орды и Альянса. Внутри вулканического кратера. Говорить как друзья. Они думают, мои братья наивны. Если они хотят собраться… мы соберёмся. Принесём знамя. Принесём речь. Приведём всех их храбрых героев. Кратер ждёт. А шёпот всё говорит. Тихий. Голодный. Хиджал помнит каждую каплю. Хиджал всегда хочет больше крови.',
+        organizer: "— Пальцебой, Кор'Кронский Каратель",
+        infoFooter: "⚠️ Полные правила в Discord. Ознакомление с полным сводом правил может предотвратить официальную отмену ивента в день проведения. Если нарушение правил приведёт к отмене, приветствуется неорганизованный WPvP для желающих остаться.",
+        footerNote: "Ивент от Пальцебоя · Кор'Кронские Каратели · #WhispersForBlood",
         discordBtn: "🎧 DISCORD",
-        registerBtn: "📋 РЕГИСТРАЦИЯ",
-        rulesBtn: "📜 ПРАВИЛА"
+        rulesBtn: "📜 ПОЛНЫЕ ПРАВИЛА"
       }
     };
 
@@ -503,59 +602,56 @@
     const eventDateDisplay = document.getElementById('eventDateDisplay');
     
     const discordBtn = document.getElementById('discordLink');
-    const registerBtn = document.getElementById('registerLink');
     const rulesBtn = document.getElementById('rulesLink');
 
     const langEnBtn = document.getElementById('langEn');
     const langRuBtn = document.getElementById('langRu');
+    
+    const loreToggle = document.getElementById('loreToggle');
+    const loreContent = document.getElementById('loreContent');
 
     // Устанавливаем ссылки
     if(discordBtn) discordBtn.href = discordURL;
-    if(registerBtn) registerBtn.href = registerURL;
-    if(rulesBtn) rulesBtn.href = rulesURL;
+    if(rulesBtn) rulesBtn.href = discordURL;
 
-    // ---------- ФУНКЦИЯ ПЕРЕКЛЮЧЕНИЯ ЯЗЫКА ----------
-    let currentLang = 'en'; // по умолчанию английский
+    // Сворачивание/разворачивание лора
+    loreToggle.addEventListener('click', () => {
+      loreContent.classList.toggle('open');
+      const arrow = loreToggle.querySelector('span:first-child');
+      if (loreContent.classList.contains('open')) {
+        arrow.textContent = '📖 ▲';
+      } else {
+        arrow.textContent = '📖 ▼';
+      }
+    });
+
+    // ---------- ЯЗЫК ----------
+    let currentLang = 'en';
 
     function setLanguage(lang) {
       currentLang = lang;
-      
-      // Сохраняем выбор в localStorage
       localStorage.setItem('wowEventLang', lang);
       
-      // Обновляем активную кнопку
       langEnBtn.classList.toggle('active', lang === 'en');
       langRuBtn.classList.toggle('active', lang === 'ru');
-      
-      // Обновляем lang атрибут html
       document.documentElement.lang = lang;
       
-      // Обновляем все элементы с data-lang
       document.querySelectorAll('[data-lang]').forEach(el => {
         const key = el.getAttribute('data-lang');
         if (translations[lang] && translations[lang][key]) {
-          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-            el.placeholder = translations[lang][key];
-          } else {
-            el.innerHTML = translations[lang][key];
-          }
+          el.innerHTML = translations[lang][key];
         }
       });
       
-      // Отдельно обновляем кнопки ссылок
       if (discordBtn) discordBtn.innerHTML = translations[lang].discordBtn;
-      if (registerBtn) registerBtn.innerHTML = translations[lang].registerBtn;
       if (rulesBtn) rulesBtn.innerHTML = translations[lang].rulesBtn;
       
-      // Обновляем отображение даты с учётом языка
       updateDateDisplay();
     }
 
-    // Функция обновления строки с датой (с учётом языка и статуса)
     function updateDateDisplay() {
       const now = new Date();
       const diff = eventDate - now;
-      
       if (diff <= 0) {
         eventDateDisplay.textContent = translations[currentLang].eventStarted;
       } else {
@@ -593,31 +689,21 @@
 
     // ---------- ИНИЦИАЛИЗАЦИЯ ----------
     function init() {
-      // Проверяем сохранённый язык
       const savedLang = localStorage.getItem('wowEventLang');
       if (savedLang && (savedLang === 'en' || savedLang === 'ru')) {
         setLanguage(savedLang);
       } else {
-        setLanguage('en'); // английский по умолчанию
+        setLanguage('en');
       }
       
-      // Запускаем таймер
       updateCountdown();
       setInterval(updateCountdown, 1000);
     }
 
-    // Обработчики кнопок языка
     langEnBtn.addEventListener('click', () => setLanguage('en'));
     langRuBtn.addEventListener('click', () => setLanguage('ru'));
 
-    // Запуск
     init();
-
-    // Очистка интервала не требуется, но для порядка
-    window.addEventListener('beforeunload', function() {
-      // интервал очистится сам при перезагрузке
-    });
-
   })();
 </script>
 
