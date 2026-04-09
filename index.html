@@ -25,6 +25,7 @@
       border-top: 6px solid #8b3a3a;
       border-bottom: 6px solid #8b3a3a;
       position: relative;
+      overflow-x: hidden; /* Чтобы иконки не создавали горизонтальный скролл */
     }
     
     /* Синий фон Альянса слева — затухает к центру */
@@ -65,51 +66,57 @@
       z-index: 1;
     }
     
-    /* Иконки Альянса — только на левой половине */
+    /* Большая иконка Альянса — выглядывает слева */
     body .bg-icons::before {
       content: "";
       position: absolute;
-      top: 0; left: 0; bottom: 0;
-      width: 50%;
+      top: 50%;
+      left: 0;
+      transform: translate(-30%, -50%);
+      width: 50vw;
+      max-width: 600px;
+      height: 100vh;
       background-image: url('img/alliance.svg');
-      background-repeat: repeat;
-      background-size: 96px 96px;
-      background-position: 
-        5% 8%, 18% 22%, 35% 5%, 42% 35%, 8% 45%,
-        25% 55%, 40% 65%, 15% 75%, 30% 85%, 45% 92%,
-        3% 18%, 20% 38%, 38% 15%, 12% 60%, 33% 72%;
-      opacity: 0.12;
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: contain;
+      opacity: 0.15;
       -webkit-mask-image: linear-gradient(90deg, 
-        rgba(0,0,0,0.8) 0%, 
-        rgba(0,0,0,0.4) 60%,
+        rgba(0,0,0,0.9) 0%, 
+        rgba(0,0,0,0.6) 40%,
+        rgba(0,0,0,0.2) 70%,
         transparent 100%);
       mask-image: linear-gradient(90deg, 
-        rgba(0,0,0,0.8) 0%, 
-        rgba(0,0,0,0.4) 60%,
+        rgba(0,0,0,0.9) 0%, 
+        rgba(0,0,0,0.6) 40%,
+        rgba(0,0,0,0.2) 70%,
         transparent 100%);
     }
     
-    /* Иконки Орды — только на правой половине */
+    /* Большая иконка Орды — выглядывает справа */
     body .bg-icons::after {
       content: "";
       position: absolute;
-      top: 0; right: 0; bottom: 0;
-      width: 50%;
+      top: 50%;
+      right: 0;
+      transform: translate(30%, -50%);
+      width: 50vw;
+      max-width: 600px;
+      height: 100vh;
       background-image: url('img/horde.svg');
-      background-repeat: repeat;
-      background-size: 96px 96px;
-      background-position: 
-        95% 12%, 82% 28%, 65% 8%, 58% 42%, 92% 48%,
-        75% 58%, 60% 68%, 85% 78%, 70% 88%, 55% 95%,
-        97% 22%, 80% 42%, 62% 18%, 88% 65%, 67% 75%;
-      opacity: 0.12;
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: contain;
+      opacity: 0.15;
       -webkit-mask-image: linear-gradient(270deg, 
-        rgba(0,0,0,0.8) 0%, 
-        rgba(0,0,0,0.4) 60%,
+        rgba(0,0,0,0.9) 0%, 
+        rgba(0,0,0,0.6) 40%,
+        rgba(0,0,0,0.2) 70%,
         transparent 100%);
       mask-image: linear-gradient(270deg, 
-        rgba(0,0,0,0.8) 0%, 
-        rgba(0,0,0,0.4) 60%,
+        rgba(0,0,0,0.9) 0%, 
+        rgba(0,0,0,0.6) 40%,
+        rgba(0,0,0,0.2) 70%,
         transparent 100%);
     }
     
