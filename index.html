@@ -14,13 +14,7 @@
 
     body {
       font-family: 'Segoe UI', 'Arial', sans-serif;
-      background: linear-gradient(90deg, 
-        #0a1628 0%, 
-        #1a2a5e 30%, 
-        #2a3a7e 50%,
-        #7e2a2a 50%,
-        #5e1a1a 70%,
-        #280a0a 100%);
+      background: #0b0c0e;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -33,32 +27,100 @@
       position: relative;
     }
     
-    /* Декоративные иконки Альянса и Орды */
+    /* Синий фон Альянса слева — затухает к центру */
     body::before {
       content: "";
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-image: 
-        url('img/alliance.svg'),
-        url('img/horde.svg');
-      background-repeat: repeat;
-      background-position: 0 0, 50% 0;
-      background-size: 120px 120px, 120px 120px;
-      opacity: 0.08;
+      top: 0; left: 0; bottom: 0;
+      width: 60%;
+      background: linear-gradient(90deg, 
+        rgba(10, 22, 40, 0.9) 0%, 
+        rgba(20, 40, 80, 0.6) 40%,
+        rgba(30, 60, 120, 0.15) 80%,
+        transparent 100%);
       pointer-events: none;
       z-index: 0;
     }
     
-    /* Затемнение по центру для лучшей читаемости */
+    /* Красный фон Орды справа — затухает к центру */
     body::after {
       content: "";
       position: fixed;
+      top: 0; right: 0; bottom: 0;
+      width: 60%;
+      background: linear-gradient(270deg, 
+        rgba(40, 10, 10, 0.9) 0%, 
+        rgba(80, 20, 20, 0.6) 40%,
+        rgba(120, 30, 30, 0.15) 80%,
+        transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    
+    /* Контейнер для иконок */
+    body .bg-icons {
+      position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.4) 100%);
       pointer-events: none;
       z-index: 1;
     }
-
+    
+    /* Иконки Альянса — только на левой половине */
+    body .bg-icons::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      width: 50%;
+      background-image: url('img/alliance.svg');
+      background-repeat: repeat;
+      background-size: 40px 40px;
+      background-position: 
+        5% 8%, 18% 22%, 35% 5%, 42% 35%, 8% 45%,
+        25% 55%, 40% 65%, 15% 75%, 30% 85%, 45% 92%,
+        3% 18%, 20% 38%, 38% 15%, 12% 60%, 33% 72%;
+      opacity: 0.12;
+      -webkit-mask-image: linear-gradient(90deg, 
+        rgba(0,0,0,0.8) 0%, 
+        rgba(0,0,0,0.4) 60%,
+        transparent 100%);
+      mask-image: linear-gradient(90deg, 
+        rgba(0,0,0,0.8) 0%, 
+        rgba(0,0,0,0.4) 60%,
+        transparent 100%);
+    }
+    
+    /* Иконки Орды — только на правой половине */
+    body .bg-icons::after {
+      content: "";
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 50%;
+      background-image: url('img/horde.svg');
+      background-repeat: repeat;
+      background-size: 40px 40px;
+      background-position: 
+        95% 12%, 82% 28%, 65% 8%, 58% 42%, 92% 48%,
+        75% 58%, 60% 68%, 85% 78%, 70% 88%, 55% 95%,
+        97% 22%, 80% 42%, 62% 18%, 88% 65%, 67% 75%;
+      opacity: 0.12;
+      -webkit-mask-image: linear-gradient(270deg, 
+        rgba(0,0,0,0.8) 0%, 
+        rgba(0,0,0,0.4) 60%,
+        transparent 100%);
+      mask-image: linear-gradient(270deg, 
+        rgba(0,0,0,0.8) 0%, 
+        rgba(0,0,0,0.4) 60%,
+        transparent 100%);
+    }
+    
+    /* Затемнение по центру для лучшей читаемости контента */
+    body .overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+      pointer-events: none;
+      z-index: 2;
+    }
     .wrapper {
       max-width: 1100px;
       width: 100%;
@@ -434,6 +496,8 @@
 </head>
 <body>
 
+<div class="bg-icons"></div>
+<div class="overlay"></div>
 <div class="wrapper">
   
   <!-- Переключатель языков -->
