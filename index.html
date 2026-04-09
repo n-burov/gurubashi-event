@@ -662,6 +662,7 @@
         day: 'numeric',
         hour: '2-digit',
         minute: '2-digit',
+        hour12: false,  // <-- 24-часовой формат
         timeZone: lang === 'en' ? 'Europe/Berlin' : 'Europe/Moscow',
         timeZoneName: 'short'
       };
@@ -712,7 +713,7 @@
         if (diff <= 0) {
           whenDateTime.textContent = currentLang === 'en' ? 'EVENT STARTED!' : 'ИВЕНТ НАЧАЛСЯ!';
         } else {
-          // Упрощённое отображение в блоке When
+          // Упрощённое отображение в блоке When (24-часовой формат)
           if (currentLang === 'en') {
             whenDateTime.textContent = 'Saturday, April 11, 2026 · 19:00 CET';
           } else {
