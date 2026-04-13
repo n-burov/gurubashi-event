@@ -570,7 +570,7 @@
     <div class="info-grid">
       <div class="info-item">
         <div class="info-label" data-lang="whenLabel">📅 Spawn Time</div>
-        <div class="info-text"><strong id="whenDateTime">Wednesday, April 16, 2026 · 20:00 MSK</strong></div>
+        <div class="info-text"><strong id="whenDateTime">Wednesday, April 16, 2026 · 19:00 CEST (20:00 MSK)</strong></div>
       </div>
       <div class="info-item">
         <div class="info-label" data-lang="whereLabel">📍 Location</div>
@@ -645,7 +645,7 @@
         subtitle: "TEL'ABIM · CHEST SPAWN",
         timerLabel: "CHEST SPAWNS IN",
         days: "days", hours: "hours", minutes: "minutes", seconds: "seconds",
-        eventDateDisplay: "Wednesday, April 16, 2026 · 20:00 MSK",
+        eventDateDisplay: "Wednesday, April 16, 2026 · 19:00 CEST (20:00 MSK)",
         eventStarted: "CHEST HAS SPAWNED! FIGHT! 🔥",
         infoTitle: "⚔️ Arena Rules & Rewards ⚔️",
         whenLabel: "📅 Spawn Time",
@@ -746,7 +746,7 @@
         if (eventDateMSK - now <= 0) {
           whenDateTime.textContent = currentLang === 'en' ? 'CHEST SPAWNED!' : 'СУНДУК ПОЯВИЛСЯ!';
         } else {
-          whenDateTime.textContent = currentLang === 'en' ? 'Wednesday, April 16, 2026 · 20:00 MSK' : 'Среда, 16 апреля 2026 · 20:00 МСК';
+          whenDateTime.textContent = currentLang === 'en' ? 'Wednesday, April 16, 2026 · 19:00 CEST (20:00 MSK)' : 'Среда, 16 апреля 2026 · 19:00 CEST (20:00 МСК)';
         }
       }
     }
